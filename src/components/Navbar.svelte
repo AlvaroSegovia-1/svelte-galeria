@@ -1,6 +1,7 @@
 <script lang="ts">
   import TailwindCss from "../lib/TailwindCSS.svelte";
   import ActiveRoute from "./ActiveRoute.svelte";
+  import { page } from "$app/stores";
 </script>
 
 <nav
@@ -19,7 +20,8 @@
       <ActiveRoute route="/">Home</ActiveRoute>
     </li>
     <li class="p-4 cursor-pointer">
-      <ActiveRoute route="/search">Search</ActiveRoute>
+      <!-- <ActiveRoute route="/search">Search</ActiveRoute> -->
+      <a class:active={$page.path === "/search"} href="/search">Buscar</a>
     </li>
   </ul>
 </nav>

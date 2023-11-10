@@ -5,6 +5,6 @@
 
 <Navbar />
 
-<div class="container mx-auto my-3">
-  <slot><!-- optional fallback --></slot>
-</div>
+<div class="container w-full mx-auto my-3" />
+
+<slot><!-- optional fallback --></slot>
