@@ -5,6 +5,10 @@
 
 <Navbar />
 
-<div class="container w-full mx-auto my-3">
+<div class="  bg-[#F6E8B5] w-full mx-auto pt-5 pb-20 mb-10">
   <slot><!-- optional fallback --></slot>
 </div>
+
+
+
+<!-- outline outline-2 -->

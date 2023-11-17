@@ -56,26 +56,27 @@
   ? ""
   : `${searchParam } Page ${actualPage}`
   } -->
+<div class="bg-[#F6E8B5] h-full">
 
-<form
-  on:submit|preventDefault={handleSubmit}
-  class="flex items-center justify-center mt-10 mb-6"
->
-  <label class="">
-    <input
-      bind:value={searchParam}
-      bind:this={ref}
-      type="text"
-      placeholder="Search"
-      class="input input-bordered w-full max-w-xs"
-      on:focus={() => ref.select()}
-    />
-  </label>
+    <form
+    on:submit|preventDefault={handleSubmit}
+    class="flex items-center justify-center pt-10 mb-6 "
+    >
+      <label class="">
+        <input
+          bind:value={searchParam}
+          bind:this={ref}
+          type="text"
+          placeholder="Search"
+          class="input input-bordered w-full max-w-xs"
+          on:focus={() => ref.select()}
+        />
+      </label>
 
   <button class="btn btn-accent ml-5" type="submit">Search</button>
-</form>
+    </form>
 
-<div class=" flex flex-wrap place-content-center gap-10">
+  <div class=" flex flex-wrap place-content-center gap-10">
   {#await promise}
     <Loading />
   {:then images}
@@ -104,7 +105,7 @@
         <button
         on:click={handleNextPage}
         type="button"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        class="text-white bg-blue-600 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >Next</button>
         {/if}
      
@@ -112,4 +113,10 @@
       {:catch}
     <h3>Error</h3>
   {/await}
-</div>
+  </div>
+
+
+
+
+ </div> 
+

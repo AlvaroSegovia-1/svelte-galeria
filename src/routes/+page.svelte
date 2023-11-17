@@ -39,12 +39,12 @@
   <title>Home - Page {actualPage}</title>
 </svelte:head>
 
+
 <h1 class="text-center">Galeria SK</h1>
 
-<hr />
 
-<div>
-  <div class=" flex flex-wrap place-content-center gap-10">
+
+  <div class="bg-[#F6E8B5] h-full flex flex-wrap justify-center place-content-center gap-8">
     {#await promise}
       <Loading />
     {:then images}
@@ -60,15 +60,16 @@
     {/await}
   </div>
 
-  <div class="w-1/2 p-4 mx-auto text-center border">
-    {#if actualPage != 1}
+  {#if actualPage != 1}
+  <div class="w-1/2 p-4 mx-auto text-center">
+    
       <button
         on:click={handlePrevPage}
         type="button"
         class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:focus:ring-yellow-900"
         >Prev</button
       >
-    {/if}
+    
 
     <button
       on:click={handleNextPage}
@@ -77,4 +78,8 @@
       >Next</button
     >
   </div>
-</div>
+
+  {/if}
+
+  
+

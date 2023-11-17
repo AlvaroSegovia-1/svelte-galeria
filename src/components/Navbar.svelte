@@ -26,15 +26,16 @@
         <a href="/">Galeria SK </a>
       </h1>
     </li>
-    <li class="p-4 cursor-pointer">
+
+
+    <!-- <li class="p-4 cursor-pointer">
       <a class:active={($page.url.pathname = "/")} href="/">Home</a>
-      <!-- <ActiveRoute route="/">Home</ActiveRoute> -->
-    </li>
-    <li class="p-4 cursor-pointer">
+    </li> -->
+
+    <!-- <li class="p-4 cursor-pointer">
       <a href="/about">About</a>
-      <!--  <a class:active={($page.url.pathname = "/about")} href="/about">About</a> -->
-      <!-- <ActiveRoute route="/">Home</ActiveRoute> -->
-    </li>
+    </li> -->
+
     <li class="p-4 cursor-pointer">
       <!-- <ActiveRoute route="/search">Search</ActiveRoute> -->
       <a class:active={($page.url.pathname = "/search")} href="/search"
