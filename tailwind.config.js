@@ -9,5 +9,8 @@ export default {
     extend: {},
   },
   darkmode: false, // or 'media' or 'class'
+  content: ['./src/routes/**/*.{svelte,js,ts}'],
+  plugins: [require('daisyui')],
+
 }
 
